@@ -1,53 +1,37 @@
 import styled from "styled-components";
 import Logo from "../../assets/Logo.png";
-import LamuerteDance from "../../assets/lamuerte.png";
 
 export const HomeContainer = styled.div`
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 5rem;
 
-  box-sizing: border-box;
-  background-color: #fafafa;
+  gap: 5rem;
 
   max-width: 100vw;
   min-height: 100vh;
-`;
 
-export const Teste = styled.div`
-  max-width: 100vw;
-  height: 100%;
-`;
-
-export const Lamuerte = styled.div`
-  background: url(${LamuerteDance}) no-repeat;
-  background-size: contain;
-
-  width: 350px;
-  height: 350px;
-
-  position: absolute;
-  right: 5rem;
-  top: 5rem;
+  background-color: #fafafa;
 `;
 
 export const HeaderHome = styled.div`
   box-sizing: border-box;
 
-  padding: 10px;
-
   display: flex;
   justify-content: center;
-  width: 50vw;
-  max-width: 100vw;
+
+  width: 100vw;
   height: 10rem;
+
+  padding: 10px;
 `;
 
 export const LogoHome = styled.div`
-  width: 10vw;
-  height: 10rem;
+  width: 8vw;
+  height: 8rem;
 
   background: url(${Logo}) no-repeat;
   background-size: contain;
@@ -63,36 +47,43 @@ export const Main = styled.div`
 
   width: 75vw;
   min-height: 50vh;
-
-  img {
-    box-sizing: border-box;
-    cursor: pointer;
-    height: 325px;
-    width: 325px;
-
-    transition: 0.6s ease-in-out;
-
-    &:hover {
-      height: 350px;
-      width: 350px;
-
-      transition: 0.6s ease-in-out, border 0s;
-    }
-  }
 `;
 
 export const ClothesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 
   gap: 3.5rem;
 
+  width: 70vw;
+
   padding: 1rem;
 
-  min-width: 75vw;
-  max-width: 85vw;
-  min-height: calc(40vh + ${(props) => props.containerShirt});
+  border-top: 1px solid black;
+
+  a {
+    height: 320px;
+    width: 320px;
+  }
+
+  img {
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    height: 325px;
+    width: 325px;
+
+    transition: 0.5s ease;
+
+    &:hover {
+      height: 350px;
+      width: 350px;
+
+      transition: 0.5s ease;
+    }
+  }
 `;
 
 export const ClothesCategories = styled.nav`
@@ -101,25 +92,25 @@ export const ClothesCategories = styled.nav`
   width: 75%;
   height: 5rem;
 
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
-  font-size: 4rem;
+  font-size: 3.5rem;
 
   font-family: "Keytin", sans-serif;
-  font-weight: bold;
 
   ul {
     display: flex;
     justify-content: space-around;
 
     width: 100%;
-    height: 4.5rem;
+    height: 4rem;
 
     li {
+      cursor: pointer;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
 
       height: 5rem;
       width: 15rem;
@@ -146,8 +137,7 @@ export const Footer = styled.div`
 
   min-width: 99.1vw;
   max-width: 100vw;
-  min-height: 2.25rem;
-  max-height: 2.25rem;
+  height: 2.25rem;
 
   background-color: #fafafa;
 `;
@@ -170,11 +160,12 @@ export const FooterMiddle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   gap: 10px;
 
-  font-family: "Keytin", sans-serif;
-
   width: 33.3%;
+
+  font-family: "Keytin", sans-serif;
 
   svg {
     height: 1rem;
@@ -192,6 +183,7 @@ export const FooterRight = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 33.3%;
 
   svg {
