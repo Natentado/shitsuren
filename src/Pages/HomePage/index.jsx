@@ -9,14 +9,19 @@ import {
   Main,
   ClothesCategories,
   ClothesContainer,
+  HellGateImg,
+  HellGateContainer,
+  ChainsLine,
 } from "./style";
 
 import { FaInstagram, FaCopyright } from "react-icons/fa";
+import { FiShoppingCart } from "react-icons/fi";
 
 import Typewritter from "typewriter-effect";
 import { useContext } from "react";
 import { PeitasContext } from "../../contexts/Peitas";
 import { Link } from "react-router-dom";
+import OrderBy from "../../components/OrderBy";
 
 function HomePage() {
   const { peitas } = useContext(PeitasContext);
@@ -25,14 +30,21 @@ function HomePage() {
     <HomeContainer>
       <HeaderHome>
         <LogoHome></LogoHome>
-      </HeaderHome>
-      <Main>
         <ClothesCategories>
-          <ul>
-            <li>Produtos</li>
-            <li>Galeria</li>
-          </ul>
+          <li>Produtos</li>
+          <li>Galeria</li>
+          <li>Politica/Contato</li>
         </ClothesCategories>
+        <FiShoppingCart />
+      </HeaderHome>
+      <HellGateContainer>
+        <HellGateImg></HellGateImg>
+      </HellGateContainer>
+      <ChainsLine />
+      <Main>
+        <h2>
+          Ordenar por: <OrderBy />
+        </h2>
         {peitas && (
           <ClothesContainer>
             {peitas.map((peita, index) => {
